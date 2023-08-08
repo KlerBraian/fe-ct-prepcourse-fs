@@ -128,13 +128,23 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   
+   var array = num.toString().split('')
+   for(i = 0; i <array.length; i++){
+      if (array[0] == 9) {
+         return true;
+      } else return false;
+   }
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+   for (i = 0; i < array.length; i++){
+      if(array[i] == array[i+1]) {
+         return true;
+      } else return false;
+   }
 }
 
 function mesesDelAño(array) {
@@ -142,18 +152,37 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+  newArray = [] 
+  for (i =0; i < array.length; i++){
+   if (array[i] ==='Enero' || array[i] ==='Marzo' || array[i] ==='Noviembre'){
+      newArray.push(array[i]);
+   }
+  } if (newArray.length < 3) {
+   return 'No se encontraron los meses pedidos';
+  } else return newArray;
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
-   // Tu código:
+   // Tu código: 
+   Tabla6 = []
+   for(i = 0; i < 11; i++) {
+      num = 6*i;
+      Tabla6.push(num);
+   } return Tabla6;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   newArray = []
+   for (i=0; i<array.length; i++) {
+   if (array[i] > 100) {
+      newArray.push(array[i]);
+      }
+   } return newArray;
 }
 
 /* ----------------------------------------------------------------------------------
