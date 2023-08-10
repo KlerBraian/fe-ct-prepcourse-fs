@@ -180,7 +180,7 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   let i = 0;
+let i = 0;
 do {
 num += 5;
 i++;
