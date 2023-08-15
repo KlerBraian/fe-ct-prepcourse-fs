@@ -78,7 +78,8 @@ function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   if(objeto[propiedad]) {
+   //if (objeto [propiedad]) {} esto es lo mismo que el hasOwnProperty
+   if(objeto.hasOwnProperty([propiedad])){
       return true;
    } else return false;
 }
@@ -129,7 +130,7 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Tu código:
    contlikes = 0
    for (i = 0; i < objetoUsuario.posts.length; i++){
-     contlikes = contlikes + objetoUsuario.posts[i].likes;
+     contlikes += objetoUsuario.posts[i].likes;
    } return contlikes;
  } 
 
